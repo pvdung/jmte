@@ -1,8 +1,4 @@
-#summary Getting started.
-
-= Getting started =
-
-This page describes how to get started with the _Java Minimal Template Engine_ or short _JMTE_.
+#summary This page describes how to get started with the _Java Minimal Template Engine_ or short _JMTE_.
 
 == Download ==
 
