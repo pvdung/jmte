@@ -1,10 +1,10 @@
 #summary This page describes how to get started with the _Java Minimal Template Engine_ or short _JMTE_.
 
-== Download ==
+= Download =
 
 There is a single distribution containing all sources, all binaries and all require libraries. 
 
-== Installation ==
+= Installation =
 
 The _Java Minimal Template Engine_ supports both interpreted and compiled templates. Compiled templates typically evaluate 2.5-10x faster then interpreted templates. 
 
@@ -12,7 +12,7 @@ If you want to use the compiled mode you need the additional ASM library which i
 
 If you do not want or the need compilation, all you need to use the JMTE is the single 80k JMTE jar. 
 
-== What is the Java Minimal Template Engine ==
+= What is the Java Minimal Template Engine =
 
 A _template_ consists of fixed text having holes in it that is filled by content dynamically provided by a model.  
 
@@ -36,15 +36,15 @@ assert "Filbert".equals(output);
 
 }}}
 
-== The Template Language ==
+= The Template Language =
 
 The template language is very simple and in a sense minimal: It only has those language constructs you can't do without:
 
-=== Pure text ===
+== Pure text ==
 
 Just static text that is copied from input to output without modification. Like the {{{<h1>}}} and the {{{</h1>}}} in the example above.
 
-=== Plain gaps ===
+== Plain gaps ==
 
 The main reason for a template is that you not only have static text, but also dynamic parts. Like in this Java statement
 
@@ -66,7 +66,7 @@ model.get("address")
 
 in Java.
 
-=== Conditional blocks ===
+== Conditional blocks ==
 
 Sometimes you might need to output static text or even larger sections of your template when certain conditions hold. Like in the first example 
 
@@ -78,7 +78,7 @@ you only want to the heading tags {{{<h1>}}} and {{{</h1>}}} to be displayed whe
 
 When there is no data in the model matching a gap it is simply filled with nothing anyway. 
 
-=== Loops ===
+== Loops ==
 
 Every time date from the model is not a single value, but rather a collection of them, you need a way to specify how to display them. This is done by the _foreach_ loop like in 
 
