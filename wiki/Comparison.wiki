@@ -39,3 +39,7 @@ These were my feelings when I did the ports to the other engines
   * *Velocity*: Without doubt the worst experience in a while - felt like in the ancient Java days, crazy API, no separation of concerns, no clear concept (or I just did not grok it) - why is this the standard?
   * *StringTemplate 3/4*: Most complete and sound template language, best concept, a little bit harder to learn, API good, biggest burden are the dependencies
   * *JMTE*: just minimal
+
+= Sources =
+
+You can [http://code.google.com/p/jmte/downloads/detail?name=templatesurvey.zip&can=2&q= download all sources] for the comparison.
