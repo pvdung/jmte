@@ -1,0 +1,35 @@
+#summary Comparing JMTE to other template engines.
+
+= Objective =
+
+This page is a naturally biased comparison of JMTE to other template engines.
+
+= Facts (the less biased parts) =
+
+||Template Engine||Runs on GAE||Expressions||[http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf MVC]||Dependencies||Compiles to byte code||Target language||
+||FreeMarker||Yes||Full||Formatting inside template, expressions inside template||Single JAR 880k||No||Java||
+||JMTE||Yes||No operators, but = for strings||Full||Jar bundled with ASM 115k (unbundled 75k)||You can choose||Java||
+||StringTemplate3||Yes||No operators||Full||ANTLR2, Jar 120k||No||Java, C#, Python, Ruby, Scala||
+||StringTemplate4||Yes||Logical operators||Full||ANTLR3, StringTemplate3, Jar 200k||Yes||Java, Python in preparation (more to come?)||
+||Velocity||Yes||Full||Not at all||Jar bundled with commons and oro 800k||No||Java||
+
+= Performance measurements =
+
+This is a tough one. There are so many assumptions you have to make to come up with anything close to a fair comparison. 
+
+My basic assumptions what a realistic scenario would include 
+ # a template like [http://jmte.googlecode.com/svn/trunk/test/com/floreysoft/jmte/realLive/template/email.jmte this]
+ # loading a template once and have many calls to it - that means loading the template is not part of the measurement, if it was the numbers would look way different
+
+All numbers in micro seconds. 
+
+||Template Engine||Real life order email||
+||FreeMarker||57||
+||JMTE||37 interpreted, 31 compiled||
+||StringTemplate3||116|| 
+||StringTemplate4||41||
+||Velocity||24||
+
+= Performance measurements revisited =
+
+= My (Oliver's) personal estimation (the really biased part) =
