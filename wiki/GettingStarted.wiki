@@ -1,8 +1,8 @@
-#summary This page describes how to get started with the _Java Minimal Template Engine_ or short _JMTE_.
+#summary This page describes how to get started with the Java Minimal Template Engine or short JMTE.
 
 = Download =
 
-There is a single distribution containing all sources, all binaries and all require libraries. 
+There is a single distribution containing all sources, all binaries and all require libraries. [http://code.google.com/p/jmte/downloads/list Download the latest version from here].
 
 = Installation =
 
