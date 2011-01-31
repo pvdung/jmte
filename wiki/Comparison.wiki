@@ -32,4 +32,12 @@ All numbers in micro seconds.
 
 = Performance measurements revisited =
 
-= My (Oliver's) personal estimation (the really biased part) =
+= Oliver's personal estimation (the really biased part) =
+
+My approach for this comparison was to start with a real life template for JMTE and redo it for all the other template engines. I did not try to use any special features of JMTE not present in other template languages - partially because there are none :).
+
+These were my feeling when I did the ports to the other engines
+  * *FreeMarker*: Good stuff, easy API, did not like missing model-view separation, some odd behavior at times
+  * *Velocity*: Without doubt the worst experience in a while - felt like in the ancient Java days, crazy API, no separation of concerns, no clear concept (or I just did not grok it) - why is this the standard?
+  * *StringTemplate*: Most complete and sound template language, best concept, a little bit harder to learn, API good, biggest burden are the dependencies
+  * *JMTE*: just minimal
