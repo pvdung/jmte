@@ -21,7 +21,7 @@ My basic assumptions what a realistic scenario would include
  # a template like [http://jmte.googlecode.com/svn/trunk/test/com/floreysoft/jmte/realLive/template/email.jmte this]
  # loading a template once and have many calls to it - that means loading the template is not part of the measurement, if it was the numbers would look way different
 
-All numbers in micro seconds. 
+I used the caliper tool for the micro benchmarks, all numbers in micro seconds:
 
 ||Template Engine||Real life order email||
 ||FreeMarker||57||
@@ -30,14 +30,12 @@ All numbers in micro seconds.
 ||StringTemplate4||41||
 ||Velocity||24||
 
-= Performance measurements revisited =
-
 = Oliver's personal estimation (the really biased part) =
 
 My approach for this comparison was to start with a real life template for JMTE and redo it for all the other template engines. I did not try to use any special features of JMTE not present in other template languages - partially because there are none :).
 
-These were my feeling when I did the ports to the other engines
+These were my feelings when I did the ports to the other engines
   * *FreeMarker*: Good stuff, easy API, did not like missing model-view separation, some odd behavior at times
   * *Velocity*: Without doubt the worst experience in a while - felt like in the ancient Java days, crazy API, no separation of concerns, no clear concept (or I just did not grok it) - why is this the standard?
-  * *StringTemplate*: Most complete and sound template language, best concept, a little bit harder to learn, API good, biggest burden are the dependencies
+  * *StringTemplate 3/4*: Most complete and sound template language, best concept, a little bit harder to learn, API good, biggest burden are the dependencies
   * *JMTE*: just minimal
