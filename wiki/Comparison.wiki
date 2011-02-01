@@ -6,11 +6,11 @@ This page is a naturally biased comparison of JMTE to other template engines.
 
 = Facts (the less biased parts) =
 
-||Template Engine||Runs on GAE||Expressions||[http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf MVC]||Dependencies||Compiles to byte code||Target language||
+||Template Engine||Runs on GAE||Expressions||[http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf MVC]||Dependencies||Compiler||Target language||
 ||FreeMarker||Yes||Full||Formatting inside template, expressions inside template||Single JAR 880k||No||Java||
-||JMTE||Yes||No operators, but = for strings||Full||Jar bundled with ASM 115k (unbundled 75k)||You can choose||Java||
+||JMTE||Yes||No operators, but = for strings||Full||Jar bundled with ASM 115k (unbundled 75k)||Optionally to Java byte code||Java||
 ||StringTemplate3||Yes||No operators||Full||ANTLR2, Jar 120k||No||Java, C#, Python, Ruby, Scala||
-||StringTemplate4||Yes||Logical operators||Full||ANTLR3, StringTemplate3, Jar 200k||Yes||Java, Python in preparation (more to come?)||
+||StringTemplate4||Yes||Logical operators||Full||ANTLR3, StringTemplate3, Jar 200k||To internal byte code||Java, Python in preparation (more to come?)||
 ||Velocity||Yes||Full||Not at all||Jar bundled with commons and oro 800k||No||Java||
 
 = Performance measurements =
