@@ -42,12 +42,11 @@ These were my feelings when I did the ports to the other engines
 
 = Sources =
 
-You can [http://code.google.com/p/jmte/downloads/detail?name=templatesurvey.zip&can=2&q= download all sources] for the comparison.
-
+You can [http://jmte.googlecode.com/files/templatesurvey-more-tests.zip download all sources] of this comparison.
 
 = Performance measurements revisited =
 
-Here are some additional more low level measurements
+Here are some additional more low level measurements:
 
 == Simple expression ==
 
