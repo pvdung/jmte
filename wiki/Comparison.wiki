@@ -36,10 +36,77 @@ My approach for this comparison was to start with a real life template for JMTE 
 
 These were my feelings when I did the ports to the other engines
   * *FreeMarker*: Good stuff, easy API, did not like missing model-view separation, some odd behavior at times
-  * *Velocity*: Without doubt the worst experience in a while - felt like in the ancient Java days, crazy API, no separation of concerns, no clear concept (or I just did not grok it) - why is this the standard?
+  * *Velocity*: Without doubt the worst experience in a while - felt like in the ancient Java days, crazy API, no separation of concerns, no clear concept (or I just did not grok it), outstanding performance probably achieved by lack of abstraction 
   * *StringTemplate 3/4*: Most complete and sound template language, best concept, a little bit harder to learn, API good, biggest burden are the dependencies
   * *JMTE*: just minimal
 
 = Sources =
 
 You can [http://code.google.com/p/jmte/downloads/detail?name=templatesurvey.zip&can=2&q= download all sources] for the comparison.
+
+
+= Performance measurements revisited =
+
+Here are some additional more low level measurements
+
+== Simple expression ==
+
+{{{${simple} stuff}}}
+
+{{{
+          benchmark   ns logarithmic runtime
+         JMTESimple 1286 ==============
+ JMTESimpleCompiled  911 =====
+          ST4Simple 2416 ==============================
+          ST3Simple 1800 ======================
+   FreemarkerSimple 2027 =========================
+     VelocitySimple  766 =
+}}}
+
+== Reflection == 
+
+{{{ ${order.orderDate} }}}
+
+{{{
+           benchmark   us logarithmic runtime
+         JMTEReflect 1,43 ===
+ JMTEReflectCompiled 1,23 =
+          ST4Reflect 2,09 ========
+          ST3Reflect 4,37 ===================
+   FreemarkerReflect 9,30 ==============================
+     VelocityReflect 1,24 =
+
+}}}
+
+== If ==
+
+{{{ ${if order.orderDate}${order.orderDate}${else}NIX${end} }}}
+
+{{{
+      benchmark    us logarithmic runtime
+         JMTEIf  3,82 =========
+ JMTEIfCompiled  3,15 ======
+          ST4If  2,26 =
+          ST3If  6,85 ==================
+   FreemarkerIf 14,75 =============================
+     VelocityIf  2,42 ==
+
+}}}
+
+== Foreach ==
+
+{{{
+${foreach order.items item
+}${item}${end}
+}}}
+
+{{{
+           benchmark   us logarithmic runtime
+         JMTEForeach 6,63 ==============
+ JMTEForeachCompiled 5,96 ==========
+          ST4Foreach 5,44 =======
+          ST3Foreach 9,90 ==============================
+   FreemarkerForeach 6,09 ===========
+     VelocityForeach 4,65 =
+
+}}}
