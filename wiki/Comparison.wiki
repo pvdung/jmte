@@ -24,11 +24,11 @@ My basic assumptions what a realistic scenario would include
 I used the caliper tool for the micro benchmarks, all numbers in micro seconds:
 
 ||Template Engine||Real life order email||
-||FreeMarker||57||
-||JMTE||37 interpreted, 31 compiled||
-||StringTemplate3||116|| 
-||StringTemplate4||41||
-||Velocity||24||
+||FreeMarker||54,5||
+||JMTE||33,8 interpreted, 29,6 compiled||
+||StringTemplate3||112,4|| 
+||StringTemplate4||39,2||
+||Velocity||23,8||
 
 = Oliver's personal estimation (the really biased part) =
 
