@@ -66,7 +66,9 @@ http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Si
 
 == If ==
 
-{{{ ${if order.orderDate}${order.orderDate}${else}NIX${end} }}}
+{{{
+${if order.orderDate}${order.orderDate}${else}NIX${end}
+}}}
 
 Measured in microseconds (µs)
 
@@ -80,5 +82,5 @@ ${foreach order.items item
 }}}
 
 Measured in microseconds (µs)
- 
+
 http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,10&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,10&chd=t:6.63,5.96,5.44,9.9,6.09,4.65&chdlp=l&image.png
