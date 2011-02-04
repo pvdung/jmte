@@ -6,7 +6,7 @@ This page is a naturally biased comparison of JMTE to other template engines.
 
 = Facts (the less biased parts) =
 
-||Template Engine||Runs on GAE||Expressions||[http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf !MVC]||Dependencies||Compiler||Target language||
+||Template Engine||Runs on GAE||Expressions||[http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf MVC]||Dependencies||Compiler||Target language||
 ||FreeMarker||Yes||Full||Formatting inside template, expressions inside template||Single JAR 880k||No||Java||
 ||JMTE||Yes||No operators, but = for strings||Full||Jar bundled with ASM 115k (unbundled 75k)||Optionally to Java byte code||Java||
 ||StringTemplate3||Yes||No operators||Full||ANTLR2, Jar 120k||No||Java, C#, Python, Ruby, Scala||
@@ -24,7 +24,7 @@ My basic assumptions what a realistic scenario would include
 I used the caliper tool for the micro benchmarks, all numbers in micro seconds:
 
 ||Template Engine||Real life order email||
-||FreeMarker||54,5||
+||!FreeMarker||54,5||
 ||JMTE||33,8 interpreted, 29,6 compiled||
 ||StringTemplate3||112,4|| 
 ||StringTemplate4||39,2||
