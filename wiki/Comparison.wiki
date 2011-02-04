@@ -50,7 +50,7 @@ Here are some additional more low level measurements:
 
 == Simple expression ==
 
-http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,2500&chxt=x,r&chbh=r&chs=220x220&cht=bhs&chco=4D89F9&chds=0,2500&chd=t:911,2416,1800,2027,766&chdlp=l&chtt=%24%7Bsimple%7D+stuff&image.png
+http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,2500&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,2500&chd=t:911,2416,1800,2027,766&chdlp=l&chtt=%24%7Bsimple%7D+stuff&image.png
 
 {{{${simple} stuff}}}
 
