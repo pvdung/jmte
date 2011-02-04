@@ -50,54 +50,27 @@ Here are some additional more low level measurements:
 
 == Simple expression ==
 
-http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,2500&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,2500&chd=t:1286,911,2416,1800,2027,766&chdlp=l&image.png
-
 {{{${simple} stuff}}}
 
-{{{
-          benchmark   ns logarithmic runtime
-         JMTESimple 1286 ==============
- JMTESimpleCompiled  911 =====
-          ST4Simple 2416 ==============================
-          ST3Simple 1800 ======================
-   FreemarkerSimple 2027 =========================
-     VelocitySimple  766 =
-}}}
+Measured in nanoseconds (ns)
+
+http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,2500&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,2500&chd=t:1286,911,2416,1800,2027,766&chdlp=l&image.png
 
 == Reflection == 
 
 {{{ ${order.orderDate} }}}
 
+Measured in microseconds (µs)
+
 http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,10&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,10&chd=t:1.43,1.23,2.09,4.37,9.3,1.24&chdlp=l&image.png
-
-{{{
-           benchmark   us logarithmic runtime
-         JMTEReflect 1,43 ===
- JMTEReflectCompiled 1,23 =
-          ST4Reflect 2,09 ========
-          ST3Reflect 4,37 ===================
-   FreemarkerReflect 9,30 ==============================
-     VelocityReflect 1,24 =
-
-}}}
 
 == If ==
 
 {{{ ${if order.orderDate}${order.orderDate}${else}NIX${end} }}}
 
+Measured in microseconds (µs)
+
 http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,15&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,15&chd=t:3.82,3.15,2.26,6.85,14.75,2.42&chdlp=l&image.png
-
-
-{{{
-      benchmark    us logarithmic runtime
-         JMTEIf  3,82 =========
- JMTEIfCompiled  3,15 ======
-          ST4If  2,26 =
-          ST3If  6,85 ==================
-   FreemarkerIf 14,75 =============================
-     VelocityIf  2,42 ==
-
-}}}
 
 == Foreach ==
 
@@ -106,16 +79,6 @@ ${foreach order.items item
 }${item}${end}
 }}}
 
+Measured in microseconds (µs)
+ 
 http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Simple|ST4Simple|JMTESimpleCompiled|JMTESimple&chxr=0,0,10&chxt=x,r&chbh=r&chs=450x200&cht=bhs&chco=4D89F9&chds=0,10&chd=t:6.63,5.96,5.44,9.9,6.09,4.65&chdlp=l&image.png
-
-
-{{{
-           benchmark   us logarithmic runtime
-         JMTEForeach 6,63 ==============
- JMTEForeachCompiled 5,96 ==========
-          ST4Foreach 5,44 =======
-          ST3Foreach 9,90 ==============================
-   FreemarkerForeach 6,09 ===========
-     VelocityForeach 4,65 =
-
-}}}
