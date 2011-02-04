@@ -50,7 +50,9 @@ Here are some additional more low level measurements:
 
 == Simple expression ==
 
-{{{${simple} stuff}}}
+{{{
+${simple} stuff
+}}}
 
 Measured in nanoseconds (ns)
 
@@ -58,7 +60,9 @@ http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Si
 
 == Reflection == 
 
-{{{ ${order.orderDate} }}}
+{{{
+${order.orderDate}
+}}}
 
 Measured in microseconds (µs)
 
@@ -77,8 +81,7 @@ http://chart.apis.google.com/chart?chxl=1:|VelocitySimple|FreemarkerSimple|ST3Si
 == Foreach ==
 
 {{{
-${foreach order.items item
-}${item}${end}
+${foreach order.items item}${item}${end}
 }}}
 
 Measured in microseconds (µs)
