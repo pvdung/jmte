@@ -36,7 +36,7 @@ These were my feelings when I did the ports to the other engines
 
 = Sources =
 
-You can [http://jmte.googlecode.com/files/templatesurvey-more-tests.zip download all sources] of this comparison.
+You can [http://jmte.googlecode.com/files/templatesurvey.zip download all sources] of this comparison.
 
 = Performance measurements revisited =
 
