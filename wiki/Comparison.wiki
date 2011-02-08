@@ -23,7 +23,7 @@ My basic assumptions what a realistic scenario would include
 
 I used the caliper tool for the micro benchmarks, all numbers in micro seconds:
 
-http://chart.apis.google.com/chart?chxl=1:|Velocity|Freemarker|ST3|ST4|JMTECompiled|JMTE|Handwritten&chxr=0,0,120&chxt=x,r&chbh=r&chs=500x200&cht=bhs&chco=4D89F9&chds=0,120&chd=t:13.4,33.8,29.6,39.2,112.4,54.5,23.8&chdlp=l&image.png
+http://chart.apis.google.com/chart?chxl=1:|Velocity|Freemarker|ST3|ST4|JMTECompiled|JMTE|Handwritten&chxr=0,0,120&chxt=x,r&chbh=r&chs=450x250&cht=bhs&chco=4D89F9&chds=0,120&chd=t:13.4,33.8,29.6,39.2,112.4,54.5,23.8&chdlp=l&image.png
 
 = Oliver's personal estimation (the really biased part) =
 
