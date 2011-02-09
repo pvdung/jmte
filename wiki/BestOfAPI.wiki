@@ -1,0 +1,14 @@
+#summary Most important parts of the API.
+
+= Most important API parts =
+
+While the [http://jmte.googlecode.com/svn/trunk/doc/index.html  
+template language itself] is one part of the _Java Minimal Template Engine_, there is also the API that triggers the transformation and defines how a model is rendered.
+
+= Renderers =
+
+As described in the [http://jmte.googlecode.com/svn/trunk/doc/index.html language specification] renderers control how objects coming from the model as displayed in the result of the template transformation.
+
+= Model Adaptor =
+
+= Processor =
