@@ -87,3 +87,7 @@ ${foreach list item}${item}\n${end}
 }}}
 
 where _list_ contains a number of items which are stored - one after the other - into the variable _item_. From inside the loop you can now access that variable just as if it was part of your model. The part between the _foreach_ and the _end_ is the body of the loop. It is evaluated as many times as you have items in your list.
+
+== And now? ==
+
+[http://jmte.googlecode.com/svn/trunk/doc/index.html This is the complete language description].
