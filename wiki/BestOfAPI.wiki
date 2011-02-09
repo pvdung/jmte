@@ -5,6 +5,8 @@
 While the [http://jmte.googlecode.com/svn/trunk/doc/index.html  
 template language itself] is one part of the _Java Minimal Template Engine_, there is also the API that triggers the transformation and defines how a model is rendered.
 
+All API classes and interface that are important for you reside in the main package _com.floreysoft.jmte_.
+
 = Renderers =
 
 As described in the [http://jmte.googlecode.com/svn/trunk/doc/index.html language specification] renderers control how objects coming from the model as displayed in the result of the template transformation.
