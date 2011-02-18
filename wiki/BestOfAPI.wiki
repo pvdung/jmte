@@ -32,7 +32,7 @@ public class DateRenderer implements Renderer<Date>{
 
 Renderers implement a parameterized interface. The generic parameter describes the type a renderer can render using its _render_ method that just takes the value without any additional formatting information.
 
-=== Named Renderers ==
+= Named Renderers =
 
 If you want more control over how a value is displayed you can also register named renderers like that
 
@@ -90,9 +90,3 @@ ${order.total;currency(parameters for the named renderer)}
 }}}
 
 Whatever is inside the parentheses will be passed as the _format_ parameter to to the render method.
-
-= Model Adaptor =
-
-= Processor =
-
-= Annotation Processor =
