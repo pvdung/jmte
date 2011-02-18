@@ -2,15 +2,47 @@
 
 = Most important API parts =
 
-While the [http://jmte.googlecode.com/svn/trunk/doc/index.html  
-template language itself] is one part of the _Java Minimal Template Engine_, there is also the API that triggers the transformation and defines how a model is rendered.
+While the [http://jmte.googlecode.com/svn/trunk/doc/index.html template language itself] is one part of the _Java Minimal Template Engine_, there is also the API that triggers the transformation and defines how a model is rendered.
 
-All API classes and interface that are important for you reside in the main package _com.floreysoft.jmte_.
+All API classes and interface that are important for you reside in the main package [http://jmte.googlecode.com/svn/trunk/src/com/floreysoft/jmte/ com.floreysoft.jmte].
 
 = Renderers =
 
-As described in the [http://jmte.googlecode.com/svn/trunk/doc/index.html language specification] renderers control how objects coming from the model as displayed in the result of the template transformation.
+As described in the [http://jmte.googlecode.com/svn/trunk/doc/index.html language specification] renderers control how objects coming from the model are displayed in the result of the template transformation.
+
+There are two types of renderers. The simple first type is registered for a certain class for values, like this:
+
+{{{
+engine.registerRenderer(Date.class, new DateRenderer());
+}}}
+
+This means when the template engine sees a value of type _Date_ it will render it using this _DateRenderer_: 
+
+{{{
+public class DateRenderer implements Renderer<Date>{
+
+	@Override
+	public String render(Date date) {
+		String rendered = DateFormat.getDateInstance(DateFormat.SHORT, Locale.GERMAN).format(date);
+		return rendered;
+	}
+
+}
+}}}
+
+Renderers implement a parameterized interface. The generic parameter describes the type a renderer can render using its _render_ method that just takes the value without any additional formatting information.
+
+=== Named Renderers ==
+
+If you want more control over how a value is displayed you can also register named renderers like that
+
+{{{
+engine.registerNamedRenderer(new CurrencyRenderer());
+}}}
+
 
 = Model Adaptor =
 
 = Processor =
+
+= Annotation Processor =
